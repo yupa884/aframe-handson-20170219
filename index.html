@@ -7,11 +7,17 @@
 	</head>
 	<body>
 		<a-scene>
-		<!-- ↓↓↓ここから下に記述する↓↓↓ -->
-
-
-
-		<!-- ↑↑↑ここから上に記述する↑↑↑ -->
-    </a-scene>
+    		<a-assets>
+    			<a-asset-item id="moongirl-obj" src="/assets/moongirl.obj"></a-asset-item>
+    			<a-asset-item id="moongirl-mtl" src="/assets/moongirl.mtl"></a-asset-item>
+    			<a-asset-item id="moongirl-png" src="/assets/moongirl.png"></a-asset-item>
+    			<img id="temple" src="/assets/temple_360.jpg">
+    		</a-assets>
+    		<a-entity obj-model="obj: #moongirl-obj; mtl: #moongirl-mtl; png: #moongirl-pgn">
+    			<a-animation attribute="position"begin="2000"to="-2 2 -3"></a-animation>
+    		</a-entity>
+    		<a-camera position="30 5 30" rotation="10 140 0"></a-camera>
+    		<a-sky src="#temple"></a-sky>
+    	</a-scene>
 	</body>
 </html>
